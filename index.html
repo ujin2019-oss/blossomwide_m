@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE SPRING FESTIVAL</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none; color: #000;}
+
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+            font-weight: 200;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+            font-weight: 900;
+            font-display: swap;
+        }
+
+        body {
+            overflow: hidden;
+            font-family: 'Pretendard';
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bgbox .bg1 .img0 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 3;
+        }
+
+        .bgbox .bg1 .img00 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bgbox .bg1 .img1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            animation: tree1 2s forwards;
+            z-index: 4;
+        }
+        @keyframes tree1 {
+            0% {left: -50px;}
+            100% {left: 0;}
+        }
+
+        .bgbox .bg1 .img2 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: tree2 2s forwards;
+            z-index: 4;
+        }
+        @keyframes tree2 {
+            0% {left: -50px; height: 100%;}
+            100% {left: 0; height: 105%;}
+        }
+
+        .bgbox .bg1 .img3 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            animation: tree3 2s forwards;
+            z-index: 4;
+        }
+        @keyframes tree3 {
+            0% {right: -50px; height: 100%;}
+            100% {right: 0; height: 105%;}
+        }
+
+        .bgbox .bg1 .img4 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            animation: tree4 2s forwards;
+            z-index: 4;
+        }
+        @keyframes tree4 {
+            0% {right: -50px;}
+            100% {right: 0;}
+        }
+
+        header {
+            position: absolute;
+            width: min(1400px, calc(100% - 60px));
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 6;
+        }
+
+        header h1 {
+            width: 100px;
+            flex-shrink: 0;
+        }
+
+        header h1 img {
+            width: 100%;
+            display: block;
+        }
+
+        header nav .gnb {
+            display: flex;
+        }
+
+        header nav .gnb li {
+            font-size: 22px;
+            transition: 0.25s;
+            text-shadow: 0 0 10px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header nav .gnb li a {
+            color: #fff;
+            display: block;
+            padding: 40px 30px;
+        }
+
+        header nav .gnb:hover li {
+            opacity: 0.7;
+        }
+
+        header nav .gnb li:hover {
+            opacity: 1;
+        }
+
+        header audio {
+            flex-shrink: 0;
+        }
+
+        .festival_text {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translateX(-50%);
+            z-index: 5;
+            text-align: center;
+            width: calc(100% - 40px);
+            max-width: 1400px;
+        }
+
+        .festival_text p {
+            margin: 0;
+        }
+
+        .festival_text .line1 {
+            font-size: 75px;
+            color: #e60012;
+            font-weight: 700;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .festival_text .line2 {
+            font-size: 38px;
+            color: #3a3a3a;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .festival_text span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateX(-40px) translateY(20px) scale(0.8);
+            animation: textFly 0.8s ease forwards;
+        }
+
+        @keyframes textFly {
+            0% {
+                opacity: 0;
+                transform: translateX(-40px) translateY(20px) scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) translateY(0) scale(1);
+            }
+        }
+
+        .festival_text .line1 span:nth-child(1)  { animation-delay: 0.0s; }
+        .festival_text .line1 span:nth-child(2)  { animation-delay: 0.05s; }
+        .festival_text .line1 span:nth-child(3)  { animation-delay: 0.10s; }
+        .festival_text .line1 span:nth-child(4)  { animation-delay: 0.15s; }
+        .festival_text .line1 span:nth-child(5)  { animation-delay: 0.20s; }
+        .festival_text .line1 span:nth-child(6)  { animation-delay: 0.25s; }
+        .festival_text .line1 span:nth-child(7)  { animation-delay: 0.30s; }
+        .festival_text .line1 span:nth-child(8)  { animation-delay: 0.35s; }
+        .festival_text .line1 span:nth-child(9)  { animation-delay: 0.40s; }
+        .festival_text .line1 span:nth-child(10) { animation-delay: 0.45s; }
+        .festival_text .line1 span:nth-child(11) { animation-delay: 0.50s; }
+        .festival_text .line1 span:nth-child(12) { animation-delay: 0.55s; }
+        .festival_text .line1 span:nth-child(13) { animation-delay: 0.60s; }
+        .festival_text .line1 span:nth-child(14) { animation-delay: 0.65s; }
+        .festival_text .line1 span:nth-child(15) { animation-delay: 0.70s; }
+        .festival_text .line1 span:nth-child(16) { animation-delay: 0.75s; }
+        .festival_text .line1 span:nth-child(17) { animation-delay: 0.80s; }
+        .festival_text .line1 span:nth-child(18) { animation-delay: 0.85s; }
+        .festival_text .line1 span:nth-child(19) { animation-delay: 0.90s; }
+        .festival_text .line1 span:nth-child(20) { animation-delay: 0.95s; }
+        .festival_text .line1 span:nth-child(21) { animation-delay: 1.00s; }
+        .festival_text .line1 span:nth-child(22) { animation-delay: 1.05s; }
+
+        .festival_text .line2 span:nth-child(1)  { animation-delay: 1.20s; }
+        .festival_text .line2 span:nth-child(2)  { animation-delay: 1.25s; }
+        .festival_text .line2 span:nth-child(3)  { animation-delay: 1.30s; }
+        .festival_text .line2 span:nth-child(4)  { animation-delay: 1.35s; }
+        .festival_text .line2 span:nth-child(5)  { animation-delay: 1.40s; }
+        .festival_text .line2 span:nth-child(6)  { animation-delay: 1.45s; }
+        .festival_text .line2 span:nth-child(7)  { animation-delay: 1.50s; }
+        .festival_text .line2 span:nth-child(8)  { animation-delay: 1.55s; }
+        .festival_text .line2 span:nth-child(9)  { animation-delay: 1.60s; }
+        .festival_text .line2 span:nth-child(10) { animation-delay: 1.65s; }
+        .festival_text .line2 span:nth-child(11) { animation-delay: 1.70s; }
+        .festival_text .line2 span:nth-child(12) { animation-delay: 1.75s; }
+        .festival_text .line2 span:nth-child(13) { animation-delay: 1.80s; }
+        .festival_text .line2 span:nth-child(14) { animation-delay: 1.85s; }
+        .festival_text .line2 span:nth-child(15) { animation-delay: 1.90s; }
+        .festival_text .line2 span:nth-child(16) { animation-delay: 1.95s; }
+        .festival_text .line2 span:nth-child(17) { animation-delay: 2.00s; }
+        .festival_text .line2 span:nth-child(18) { animation-delay: 2.05s; }
+        .festival_text .line2 span:nth-child(19) { animation-delay: 2.10s; }
+        .festival_text .line2 span:nth-child(20) { animation-delay: 2.15s; }
+        .festival_text .line2 span:nth-child(21) { animation-delay: 2.20s; }
+        .festival_text .line2 span:nth-child(22) { animation-delay: 2.25s; }
+        .festival_text .line2 span:nth-child(23) { animation-delay: 2.30s; }
+        .festival_text .line2 span:nth-child(24) { animation-delay: 2.35s; }
+        .festival_text .line2 span:nth-child(25) { animation-delay: 2.40s; }
+        .festival_text .line2 span:nth-child(26) { animation-delay: 2.45s; }
+        .festival_text .line2 span:nth-child(27) { animation-delay: 2.50s; }
+        .festival_text .line2 span:nth-child(28) { animation-delay: 2.55s; }
+        .festival_text .line2 span:nth-child(29) { animation-delay: 2.60s; }
+        .festival_text .line2 span:nth-child(30) { animation-delay: 2.65s; }
+        .festival_text .line2 span:nth-child(31) { animation-delay: 2.70s; }
+        .festival_text .line2 span:nth-child(32) { animation-delay: 2.75s; }
+        .festival_text .line2 span:nth-child(33) { animation-delay: 2.80s; }
+        .festival_text .line2 span:nth-child(34) { animation-delay: 2.85s; }
+        .festival_text .line2 span:nth-child(35) { animation-delay: 2.90s; }
+        .festival_text .line2 span:nth-child(36) { animation-delay: 2.95s; }
+        .festival_text .line2 span:nth-child(37) { animation-delay: 3.00s; }
+        .festival_text .line2 span:nth-child(38) { animation-delay: 3.05s; }
+        .festival_text .line2 span:nth-child(39) { animation-delay: 3.10s; }
+        .festival_text .line2 span:nth-child(40) { animation-delay: 3.15s; }
+
+        .petals_box .petals1 {
+            position: absolute;
+            background: url(image/petals_0.png) repeat-y;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            animation: petals1 10s infinite linear;
+            background-size: 100%;
+            z-index: 4;
+        }
+
+        @keyframes petals1 {
+            0% {background-position: 0 0;}
+            100% {background-position: 0 800px;}
+        }
+
+        .petals_box .petals2 {
+            position: absolute;
+            background: url(image/petals_00.png) repeat-y;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            animation: petals2 9s infinite linear;
+            background-size: 80%;
+            z-index: 4;
+            opacity: 0.5;
+        }
+
+        @keyframes petals2 {
+            0% {background-position: 0 0;}
+            100% {background-position: 0 1200px;}
+        }
+
+        /* mobile */
+        @media screen and (max-width: 768px) {
+            .wrap {
+                min-height: 100vh;
+            }
+
+            header {
+                width: 100%;
+                left: 0;
+                top: 0;
+                transform: none;
+                padding: 16px 20px;
+                justify-content: space-between;
+                gap: 12px;
+            }
+
+            header h1 {
+                width: 72px;
+                margin: 0;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            header audio {
+                width: 110px;
+                height: 28px;
+                margin: 0;
+            }
+
+            .festival_text {
+                width: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0 20px;
+            }
+
+            .festival_text .line1 {
+                font-size: clamp(28px, 8vw, 40px);
+                line-height: 1.2;
+                margin-bottom: 10px;
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            .festival_text .line2 {
+                font-size: clamp(15px, 4.2vw, 20px);
+                line-height: 1.5;
+                white-space: normal;
+                word-break: keep-all;
+            }
+
+            .bgbox .bg1 .img0,
+            .bgbox .bg1 .img00 {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .bgbox .bg1 .img1 {
+                width: 42%;
+                height: auto;
+                left: -8%;
+                bottom: 0;
+            }
+
+            .bgbox .bg1 .img2 {
+                width: 48%;
+                height: auto;
+                left: -10%;
+                top: 0;
+            }
+
+            .bgbox .bg1 .img3 {
+                width: 48%;
+                height: auto;
+                right: -10%;
+                top: 0;
+            }
+
+            .bgbox .bg1 .img4 {
+                width: 42%;
+                height: auto;
+                right: -8%;
+                bottom: 0;
+            }
+
+            .petals_box .petals1 {
+                background-size: cover;
+                animation: petals1Mobile 12s infinite linear;
+            }
+
+            .petals_box .petals2 {
+                background-size: cover;
+                animation: petals2Mobile 10s infinite linear;
+            }
+
+            @keyframes petals1Mobile {
+                0% {background-position: 0 0;}
+                100% {background-position: 0 500px;}
+            }
+
+            @keyframes petals2Mobile {
+                0% {background-position: 0 0;}
+                100% {background-position: 0 700px;}
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1><img src="image/logo.png" alt="롯데 스프링 페스티벌 로고"></h1>
+
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">쇼핑</a></li>
+                    <li><a href="#">버스킹</a></li>
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">참여하기</a></li>
+                    <li><a href="#">확인/조회</a></li>
+                </ul>
+            </nav>
+
+            <audio src="audio/springend.mp3" controls autoplay></audio>
+        </header>
+
+        <div class="festival_text">
+            <p class="line1">
+                <span>L</span><span>O</span><span>T</span><span>T</span><span>E</span>
+                <span>&nbsp;</span>
+                <span>S</span><span>P</span><span>R</span><span>I</span><span>N</span><span>G</span>
+                <span>&nbsp;</span>
+                <span>F</span><span>E</span><span>S</span><span>T</span><span>I</span><span>V</span><span>A</span><span>L</span>
+            </p>
+
+            <p class="line2">
+                <span>2</span><span>0</span><span>2</span><span>6</span><span>.</span><span>0</span><span>4</span><span>.</span><span>1</span><span>1</span>
+                <span>&nbsp;</span>
+                <span>s</span><span>a</span><span>t</span>
+                <span>&nbsp;</span>
+                <span>-</span>
+                <span>&nbsp;</span>
+                <span>0</span><span>4</span><span>.</span><span>1</span><span>9</span>
+                <span>&nbsp;</span>
+                <span>s</span><span>u</span><span>n</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>서</span><span>울</span>
+                <span>&nbsp;</span>
+                <span>잠</span><span>실</span>
+                <span>&nbsp;</span>
+                <span>롯</span><span>데</span><span>월</span><span>드</span><span>몰</span>
+            </p>
+        </div>
+
+        <div class="bgbox">
+            <div class="bg1">
+                <img src="image/bg0.png" alt="" class="img0">
+                <img src="image/bg00.png" alt="" class="img00">
+            </div>
+        </div>
+
+        <div class="petals_box">
+            <div class="petals1"></div>
+            <div class="petals2"></div>
+        </div>
+    </div>
+</body>
+</html>
